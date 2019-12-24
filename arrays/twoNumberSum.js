@@ -5,6 +5,8 @@ If any two numbers in the input array add up to the target sum, the function sho
 If no two numbers add up to the target sum, the function should return an empty array.
 Only return at most one pair of numbers which add up to the target sum.
 
+
+Best: O(n) time | O(n) space - where n is the length of the array
 */
 
 function twoNumberSum(array, targetSum) {

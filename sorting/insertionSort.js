@@ -1,3 +1,8 @@
+/*
+Best: O(n) time | O(1) space - where n is the length of the array
+Average/worst: O(n^2) time | O(1) space
+*/
+
 function insertionSort(arr) {
 	for (let i = 1; i < arr.length; i++) {
 		let j = i;
