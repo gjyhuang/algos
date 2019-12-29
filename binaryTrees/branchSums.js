@@ -16,6 +16,12 @@ class BinaryTree {
 }
 
 function branchSums(root) {
+  // pass in a node and a sum to a helper recursion function, which is initialized at 0
+	// if no node, return
+	// add the node's value to the sum
+	// if no children, push the sum to the sum array
+	// recursively call the helper on .left and .right
+
 	const sums = [];
 	sumHelper(root, 0);
 	return sums;
