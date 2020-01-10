@@ -5,6 +5,9 @@ representing a target sum. The function should find all quadruplets
 
 [7,6,4,-1,1,2], 16 // [[7,6,4,-1], [7,6,1,2]]
 
+Worst: O(n^3) time | O(n^2) space, where n is the length of the input array
+Best: O(n^2) time | O(n^2) space
+
    0, 1, 2,  3, 4, 5,
   [7, 6, 4, -1, 1, 2], 16
 populating the hash table:
