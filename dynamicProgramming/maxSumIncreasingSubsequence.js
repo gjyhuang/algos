@@ -6,6 +6,8 @@ increasing subsequence in the array. (The numbers do not have to be adjacent.) T
 an array of the numbers in said subsequence. Assume that there will only be one increasing subsequence
 with the greatest sum.
 
+O(n^2) time | O(n) space
+
           [10, 70, 20, 30, 50, 11, 30] // [110, [10,20,30,50]]
 sum[i]    [10  80  30  60 110  21  60]
 sequence    0   0   0   0   0   0   0
