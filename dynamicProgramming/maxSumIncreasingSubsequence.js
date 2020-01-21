@@ -57,7 +57,6 @@ function maxSumIncreasingSubsequence(array) {
 		}
 		if (sums[i] >= sums[maxSumIdx]) maxSumIdx = i;
 	}
-	console.log(sequences)
 	return [sums[maxSumIdx], findSequence(maxSumIdx)];
 
 	function findSequence(idx) {
