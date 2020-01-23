@@ -12,19 +12,19 @@ O(n^2) time | O(n) space
 sum[i]    [10  80  30  60 110  21  60]
 sequence    0   0   0   0   0   0   0
                 1   2   2   2   5   2
-								        3   3       6
-												    4
+                        3   3       6
+                            4
 
-														    j   i
-			    [10, 70, 20, 30, 50, 11, 30]
+                                j   i
+          [10, 70, 20, 30, 50, 11, 30]
 
-		num j   num i  sums j  sums i   included?
-		   10      30      10      30      y
-			 70                              n (num j is greater than num i)
-			 20      30      30      40      y                          sums i < num 1 + sums j
-			 30                              n (greater than)
-			 50                              n (greater than)
-			 11      30      21      60      n (11 breaks subsequence - sums i > num i + sums j)
+    num j   num i  sums j  sums i   included?
+       10      30      10      30      y
+       70                              n (num j is greater than num i)
+       20      30      30      40      y                          sums i < num 1 + sums j
+       30                              n (greater than)
+       50                              n (greater than)
+       11      30      21      60      n (11 breaks subsequence - sums i > num i + sums j)
 
 
 // create two arrays to track the sum and the sequence to make up each sum
