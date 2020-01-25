@@ -13,7 +13,15 @@ O(n) time | O(1) space
      / \ / \
     D  E F  G
 	 / \
-	H   I
+  H   I
+
+  // if the top ancestor equals either of the descendants, return the top ancestor
+  // goal: set both descendants to an equal depth, then keep traversing up the tree until
+     they equal each other - that will be their youngest common ancestor
+  // find how deep in the tree both descendants are
+  // for the descendant with a lower depth, traverse up until equal depth as the other descendant
+  // then keep traversing up with both of them until they equal each other
+
 */
 
 class AncestralTree {
@@ -24,9 +32,9 @@ class AncestralTree {
 }
 
 function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
+	if (topAncestor === descendantOne || topAncestor === descendantTwo) return topAncestor;
 	const depthOne = getDepth(topAncestor, descendantOne);
 	const depthTwo = getDepth(topAncestor, descendantTwo);
-	if (topAncestor === descendantOne || topAncestor === descendantTwo) return topAncestor;
 	if (depthOne > depthTwo) {
 		let diff = depthOne - depthTwo;
 		// console.log(diff)
