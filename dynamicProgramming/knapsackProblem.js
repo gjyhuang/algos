@@ -8,6 +8,13 @@ capacity. Return an array with the max combined value and an array of each item'
 
 [[1,2],[4,3],[5,6],[6,7]],10 // [10, [1,3]]
 
+ v,w    capacities                  (values are stored below)
+items   0   1   2   3   4   5   6   7   8   9  10
+[1,2]   0   0   1   1   1   1   1   1   1   1   1
+[4,3]   0   0   1   4   4   5   5   5   5   5   5
+[5,6]   0   0   1   4   4   5   5   5   6   9   9
+[6.7]   0   0   1   4   4   5   5   6   6   9  10
+
 // build a 2D array, values, where the columns are capacities and the rows are items
 // loop through each item at i (items)
 // loop through capacity at j (capacity)
