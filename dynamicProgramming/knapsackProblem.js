@@ -56,3 +56,24 @@ function knapsackProblem(items, capacity) {
 		return indices;
 	}
 }
+
+// // recursive solution
+// // base case: 0 val/items at max weight of 0
+// // memoize the max value and the array of indices
+
+// function knapsackProblem(items, capacity) {
+// 	const maxVal = helper(items, capacity, 0, [], []);
+// 	console.log([maxVal[0], maxVal[1]])
+// 	return [maxVal[0], maxVal[1]];
+
+// 	function helper(items, capacity, i, cache, storedItems) {
+// 		let valueIfAdded = [0, []], valueNotAdded = [0, []];
+// 		if (capacity === 0 || i > items.length-1) return [0, storedItems];
+// 		if (capacity >= items[i][1]) {
+// 			valueIfAdded = helper(items, capacity - items[i][1], i + 1, cache, [...storedItems, i]);
+// 			if (valueIfAdded) valueIfAdded[0] = valueIfAdded[0] + items[i][0];
+// 		}
+// 		valueNotAdded = helper(items, capacity, i+1, cache, [...storedItems]);
+// 		return valueNotAdded[0] < valueIfAdded[0] ? [valueIfAdded[0], valueIfAdded[1]] : [valueNotAdded[0], valueNotAdded[1]];
+// 	}
+// }
