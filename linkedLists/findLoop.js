@@ -39,16 +39,16 @@ function findLoop(head) {
 		// move 1 and 2 forward until 1 and 2 are set to the same node
 		// return 1
 
-	let first = head.next;
-	let second = head.next.next;
-	while (first !== second) {
-		first = first.next;
-		second = second.next.next;
-	}
-	first = head;
-	while (first !== second) {
-		first = first.next;
-		second = second.next;
-	}
-	return first;
+  let hare = head.next.next;
+  let tortoise = head.next;
+  while (hare !== tortoise) {
+    hare = hare.next.next;
+    tortoise = tortoise.next;
+  }
+  tortoise = head;
+  while (hare !== tortoise) {
+    tortoise = tortoise.next;
+    hare = hare.next;
+  }
+  return hare;
 }
