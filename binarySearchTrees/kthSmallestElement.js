@@ -44,3 +44,19 @@ function depthFirst(vals, tree, k) {
       depthFirst(vals, tree.right, k)
   }
 }
+
+// // iterative, O(N+k) time (O(logN+k) best case), O(n+k) space
+// var kthSmallest = function(root, k) {
+//     const stack = [];
+//     while(true) {
+//         while (root) {
+//             stack.push(root);
+//             root = root.left;
+//         }
+//         root = stack.pop();
+//         k--;
+//         // console.log(k, root.val)
+//         if (k === 0) return root.val;
+//         root = root.right;
+//     }
+// }
