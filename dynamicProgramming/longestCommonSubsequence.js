@@ -6,6 +6,8 @@ in order to form a subsequence. Assume that there will only be one longest commo
 
 "ZXVVYZW", "XKYKZPW" // ["X","Y","Z","W"]
 
+O(nm) time | O(nm) space, where n and m are the lengths of the two strings
+
 (/ means the strings have no common subsequence)
 idx col     0     1     2     3     4     5     6			7     str2
 row        ""     X     K     Y     K     Z     P     W
@@ -19,10 +21,10 @@ row        ""     X     K     Y     K     Z     P     W
 7     W     /     X     X     XY    XY    XYZ   XYZ   XYZW
 str1
 
-X = string[2]			// these idxs are all when row = col
-Y = string[4]     // && str at [row][col] is longer than at [r-1][c-1]
-Z = string[5]
-W = string[6]
+X = str1[2], str2[1]     // these idxs are all when str1[r][c] = str2[r][c]
+Y = str1[5], str2[3]     // && str at [row][col] is longer than at [r-1][c-1]
+Z = str1[6], str2[5]
+W = str1[7], str2[7]
 
 // initialize a 2D array that will hold the lengths of the max subsequences
 	// initialize to their lengths + 1 for the row/col for the empty string
