@@ -7,6 +7,8 @@ merge the lists and return the head of the merged list. The list should be in so
 2 -> 6 -> 7 -> 8
 1 -> 3 -> 4 -> 5 -> 9 -> 10 // 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
+O(n+m) time | O(1) space
+
 n1 (1) < n2 (2), prev1 = null              list 1: 1      -> 3 -> 4 -> 5 -> 9 -> 10
 	set prev1 to n1                                 [1]     -> 3 -> 4 -> 5 -> 9 -> 10
 	set n1 to n1.next
