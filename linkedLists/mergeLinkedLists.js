@@ -42,18 +42,18 @@ class LinkedList {
 function mergeLinkedLists(headOne, headTwo) {
 	let n1 = headOne;
 	let n2 = headTwo;
-	let prev1 = null;
-  while (n1 && n2) {
+	let prev = null;
+	while (n1 && n2) {
 		if (n1.value < n2.value) {
-			prev1 = n1;
-			n1 = n1.next;
+			prev = n1;
+			n1 = n1.next
 		} else {
-			if (prev1) prev1.next = n2;
-			prev1 = n2;
+			if (prev) prev.next = n2;
+			prev = n2;
 			n2 = n2.next;
-			prev1.next = n1;
+			prev.next = n1;
 		}
 	}
-	if (n2) prev1.next = n2;
+	if (n2) prev.next = n2;
 	return headOne.value < headTwo.value ? headOne : headTwo;
 }
