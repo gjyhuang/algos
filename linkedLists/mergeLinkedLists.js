@@ -19,9 +19,9 @@ n1 (3) > n2 (2), prev1 = 1                 list 1:[1]->      3 -> 4 -> 5 -> 9 ->
 	set prev1.next to n1                             1 ->[2]-> 3 -> 4 -> 5 -> 9 -> 10
 n1 (3) < n2 (4), prev1 = 2
 
-	// merge both lists into list one
+  // merge both lists into list one
+  // use prev variable, initialized to null - the prev node of n1
 	// set variables, n1 and n2, to both heads
-	// need to assign a variable to the prev of n1 (default is null)
 	// while these nodes exist, check which one's value is lower
 		// if n1 < n2, set prev1 to n1 and n1 is the .next node
 		// if n2 < n1
